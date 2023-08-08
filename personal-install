@@ -1,0 +1,8 @@
+#!/usr/bin/env sh
+
+sh autogen.sh && \
+    ./configure --with-tree-sitter --with-sqlite3 --with-webp --with-x --without-compress-install --with-xwidgets \
+                -with-threads --with-harfbuzz --with-jpeg --with-json \
+                --with-modules --with-imagemagick --with-native-compilation && \
+        make --jobs=8 && \
+        sudo make install
